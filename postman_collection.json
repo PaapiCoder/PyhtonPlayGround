@@ -1,0 +1,37 @@
+{
+  "info": {
+    "name": "Glue Job Trigger API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Trigger Glue Job",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"jobName\": \"daily-job\",\n  \"startDate\": \"2025-07-01\",\n  \"endDate\": \"2025-07-17\"\n}"
+        },
+        "url": {
+          "raw": "https://<your-api-id>.execute-api.<region>.amazonaws.com/trigger-glue-job",
+          "protocol": "https",
+          "host": [
+            "<your-api-id>",
+            "execute-api",
+            "<region>",
+            "amazonaws.com"
+          ],
+          "path": [
+            "trigger-glue-job"
+          ]
+        }
+      }
+    }
+  ]
+}
